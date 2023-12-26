@@ -3,7 +3,7 @@ import os.path
 
 EATEN_FILE = "eaten.txt"
 
-chocs = {"Malibu", "Cointreau", "Southern Comfort", "Vodka", "Remy Martin",
+CHOCS = {"Malibu", "Cointreau", "Southern Comfort", "Vodka", "Remy Martin",
          "Matusalem", "Drambuie", "Famous Grouse"}
 
 eaten = set()
@@ -17,10 +17,10 @@ if os.path.isfile(EATEN_FILE):
 
 print(f"Eaten: {eaten}")
         
-remaining = list(chocs - eaten)
+remaining = list(CHOCS - eaten)
 if not remaining:
     chocs_reset = True
-    remaining = list(chocs)
+    remaining = list(CHOCS)
 
 print(f"\nRemaining: {remaining}")
 
