@@ -15,7 +15,6 @@ if os.path.isfile(EATEN_FILE):
         for line in file:
             eaten.add(line.rstrip())
 
-eaten = set(eaten)
 print(f"Eaten: {eaten}")
         
 remaining = list(chocs - eaten)
