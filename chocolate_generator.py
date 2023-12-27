@@ -8,7 +8,7 @@ CHOCS = {"Malibu", "Cointreau", "Southern Comfort", "Vodka", "Remy Martin",
 
 eaten = set()
 
-chocs_reset = False
+file_write_mode = "a" #Set to append to eaten file by default
 
 if os.path.isfile(EATEN_FILE):
     with open(EATEN_FILE) as file:
@@ -19,18 +19,13 @@ print(f"Eaten: {eaten}")
         
 remaining = list(CHOCS - eaten)
 if not remaining:
-    chocs_reset = True
+    file_write_mode = "w" #Now set to overwrite eaten file
     remaining = list(CHOCS)
 
 print(f"\nRemaining: {remaining}")
 
 chosen_choc = random.choice(remaining)
 print(f"\nGenerated chocolate: {chosen_choc} 😋")
-
-if chocs_reset:
-    file_write_mode = "w"
-else:
-    file_write_mode = "a"
 
 file = open(EATEN_FILE, file_write_mode)
 file.write(chosen_choc + "\n")
