@@ -1,7 +1,9 @@
 import random
 import os.path
 
-EATEN_FILE = "eaten.txt"
+CHOCOLATE_DIR = os.path.dirname(__file__) #Directory of chocolate python file
+
+EATEN_FILE = CHOCOLATE_DIR + "/eaten.txt"
 
 CHOCS = {"Malibu", "Cointreau", "Southern Comfort", "Vodka", "Remy Martin",
          "Matusalem", "Drambuie", "Famous Grouse"}
