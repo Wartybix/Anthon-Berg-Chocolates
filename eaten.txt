@@ -1,7 +1,2 @@
-Matusalem
-Cointreau
-Malibu
-Famous Grouse
-Drambuie
-Remy Martin
-Southern Comfort
+Kahlua
+Vodka
